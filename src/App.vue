@@ -1,13 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app" class="container-fluid outerdiv">
+    <app-header></app-header>
+    <app-search></app-search>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import AppHeader from './components/AppHeader';
+import AppSearch from './components/AppSearch';
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    AppHeader,
+    AppSearch,
+  }
 }
 </script>
 
@@ -18,6 +25,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
+}
+.outerdiv {
   margin-top: 60px;
 }
 </style>
