@@ -19,15 +19,114 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+} */
+body {
+  background-color:#f2f2f2;
 }
+
+ul.rel-results {
+  list-style-type: square;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nojs {
+  padding: 2px;
+  padding-left: 6px;
+  margin-bottom: 5px;
+  background: #ff0000;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+}
+
 .outerdiv {
   margin-top: 60px;
+}
+
+.span-style {
+  font-size: 17px;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+.bar-style {
+  background: #337AB7;
+  color: rgb(250, 250, 250);
+}
+
+.related-results {
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+}
+.movie-poster {
+  width: 300px;
+  margin-right: 10px;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+.span-outer {
+  font-size: 20px;
+}
+
+.outer-p {
+  margin-top: 10px;
+}
+
+.inner-p {
+  margin: 2px;
+}
+
+.outer-p-2 {
+  margin-top: 5px;
+}
+
+.outer-p-3 {
+  margin-top: 15px;
+}
+
+.divider {
+  margin: 0 8px 0 8px;
+}
+
+.divider:before {
+  content: "|";
+}
+
+@media (max-width: 850px) {
+  .related-results {
+    display: none;
+  }
 }
 </style>
